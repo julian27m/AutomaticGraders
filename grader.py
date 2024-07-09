@@ -2,9 +2,6 @@
 
 # Dependencies
 import os
-import shutil
-
-# Import helper functions from util.py
 from util import send_feedback, print_stderr
 
 def main(partId):
@@ -12,8 +9,8 @@ def main(partId):
     submission_location = "/shared/submission/"
     expected_filename = "ControladorLetreroPropiedad.cs"
     
-    # Check if the expected file is present in the submission
-    if not os.path.exists(os.path.join(submission_location, expected_filename)):
+    # Check for the exact file with the correct name and extension
+    if not os.path.isfile(os.path.join(submission_location, expected_filename)):
         send_feedback(0.0, f"El archivo enviado no se llama {expected_filename}.")
         return
 
