@@ -7,9 +7,13 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && apt-get clean
 
-# Copy grader files
+# Create the /shared directory
+RUN mkdir -p /shared
+
+# Copy grader files including the Tests directory
 COPY grader.py /autograder/source/
 COPY util.py /autograder/source/
+COPY Tests /autograder/source/Tests
 
 # Set the working directory
 WORKDIR /autograder/source
