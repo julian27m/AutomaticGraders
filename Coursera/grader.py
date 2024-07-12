@@ -3,36 +3,30 @@
 # Dependencias
 import os
 import re
-from util import send_feedback, print_stderr, initialize_feedback, finalize_feedback, append_feedback
+from util import send_feedback, print_stderr
 
 def main(partId):
-    # Directorio de envío
+    # El directorio /shared/submission/ es el directorio de envío estándar en todos los cursos
     submission_location = "/shared/submission/"
-    test_directory = "/autograder/source/Tests"
+    # Directorio para pruebas locales
+    # submission_location = "/autograder/source/"
     expected_filename = "ControladorLetreroPropiedad.cs"
+    submission_filepath = os.path.join(submission_location, expected_filename)
 
-    # Inicializar feedback
-    initialize_feedback()
-    print_stderr("Feedback initialized")
-
-    # Verificar si existe el directorio de pruebas
-    if not os.path.isdir(test_directory):
-        send_feedback(0.0, f"El directorio de pruebas '{test_directory}' no existe.")
+    # Comprobar si el archivo esperado está presente en el envío
+    if not os.path.isfile(submission_filepath):
+        send_feedback(0.0, f"El archivo enviado no se llama {expected_filename}.")
         return
 
-    # Obtener todos los archivos en el directorio de pruebas
-    test_files = [f for f in os.listdir(test_directory) if os.path.isfile(os.path.join(test_directory, f))]
-    print_stderr(f"Test files found: {test_files}")
-
-    if not test_files:
-        send_feedback(0.0, "No se encontraron archivos en el directorio de pruebas.")
-        return
+    # Leer el contenido del archivo de envío
+    with open(submission_filepath, 'r') as file:
+        submission_content = file.read()
 
     # Definir los patrones de expresiones regulares para los elementos requeridos y sus respectivos mensajes de retroalimentación
     checks = [
         {
             "pattern": r"using System.Collections;\s*using System.Collections.Generic;\s*using UnityEngine;\s*using TMPro;",
-            "error_message": "El código debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "error_message": "El código debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.",
             "points_deducted": 10
         },
         {
@@ -67,34 +61,23 @@ def main(partId):
         }
     ]
 
+    # Inicializar la puntuación
     total_points = 100
+    errors = []
 
-    # Procesar cada archivo en el directorio de pruebas
-    for test_file in test_files:
-        test_file_path = os.path.join(test_directory, test_file)
-        with open(test_file_path, 'r') as file:
-            submission_content = file.read()
+    # Verificar los elementos requeridos usando expresiones regulares
+    for check in checks:
+        if not re.search(check["pattern"], submission_content):
+            errors.append(check["error_message"])
+            total_points -= check["points_deducted"]
 
-        errors = []
-        file_points = total_points
-
-        # Verificar los elementos requeridos usando expresiones regulares
-        for check in checks:
-            if not re.search(check["pattern"], submission_content):
-                errors.append(check["error_message"])
-                file_points -= check["points_deducted"]
-
-        # Si hay errores, enviar retroalimentación con los errores encontrados
-        if errors:
-            feedback = f"Archivo: {test_file}\nSe encontraron los siguientes errores:\n" + "\n".join(errors)
-            append_feedback(file_points / 100.0, feedback, test_file)
-        else:
-            # Si todo es correcto...
-            append_feedback(1.0, f"Archivo: {test_file}\n¡Buen trabajo! El script contiene todos los elementos requeridos y no tiene errores de sintaxis.", test_file)
-
-    # Finalizar feedback
-    finalize_feedback()
-    print_stderr("Feedback finalized")
+    # Si hay errores, enviar retroalimentación con los errores encontrados
+    if errors:
+        feedback = "Se encontraron los siguientes errores:\n" + "\n".join(errors)
+        send_feedback(total_points / 100.0, feedback)
+    else:
+        # Si todo es correcto...
+        send_feedback(1.0, "¡Buen trabajo! El script contiene todos los elementos requeridos y no tiene errores de sintaxis.")
 
 if __name__ == '__main__':
     try:

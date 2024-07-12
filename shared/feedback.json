@@ -1,0 +1,84 @@
+{
+    "feedback_items": [
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestNoImportaciones.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestNoImportaciones.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestStartVacio.cs\nSe encontraron los siguientes errores:\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.",
+            "file": "TestStartVacio.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesPuntoComa.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesPuntoComa.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesNombresIncorrectos.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesNombresIncorrectos.cs"
+        },
+        {
+            "score": 1.0,
+            "feedback": "Archivo: TestImportacionesExtra.cs\n\u00a1Buen trabajo! El script contiene todos los elementos requeridos y no tiene errores de sintaxis.",
+            "file": "TestImportacionesExtra.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestNoClase.cs\nSe encontraron los siguientes errores:\nLa clase debe declararse como 'public class ControladorLetrero : MonoBehaviour {'.",
+            "file": "TestNoClase.cs"
+        },
+        {
+            "score": 1.0,
+            "feedback": "Archivo: ControladorLetreroPropiedad.cs\n\u00a1Buen trabajo! El script contiene todos los elementos requeridos y no tiene errores de sintaxis.",
+            "file": "ControladorLetreroPropiedad.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestNoStart.cs\nSe encontraron los siguientes errores:\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.",
+            "file": "TestNoStart.cs"
+        },
+        {
+            "score": 0.8,
+            "feedback": "Archivo: TestUnaVariable.cs\nSe encontraron los siguientes errores:\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.",
+            "file": "TestUnaVariable.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesSintaxis.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesSintaxis.cs"
+        },
+        {
+            "score": 1.0,
+            "feedback": "Archivo: TestTextoCorrecto.txt\n\u00a1Buen trabajo! El script contiene todos los elementos requeridos y no tiene errores de sintaxis.",
+            "file": "TestTextoCorrecto.txt"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesIncompletas.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesIncompletas.cs"
+        },
+        {
+            "score": 0.8,
+            "feedback": "Archivo: TestNoMetodo.cs\nSe encontraron los siguientes errores:\nLa funci\u00f3n 'DarMensajePropiedad' debe declararse correctamente y retornar el mensaje 'Propiedad de ' m\u00e1s el nombre del propietario.",
+            "file": "TestNoMetodo.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesRepetidas.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesRepetidas.cs"
+        },
+        {
+            "score": 0.9,
+            "feedback": "Archivo: TestImportacionesOrden.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "file": "TestImportacionesOrden.cs"
+        },
+        {
+            "score": 0.6,
+            "feedback": "Archivo: TestNingunaVariable.cs\nSe encontraron los siguientes errores:\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.",
+            "file": "TestNingunaVariable.cs"
+        }
+    ]
+}
