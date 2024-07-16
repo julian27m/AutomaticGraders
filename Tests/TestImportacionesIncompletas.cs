@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class ControladorLetrero : MonoBehaviour
+public class ControladorLetreroPropiedad : MonoBehaviour
 {
     public string nombrePropietario;
 

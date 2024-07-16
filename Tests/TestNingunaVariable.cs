@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ControladorLetrero : MonoBehaviour
+public class ControladorLetreroPropiedad : MonoBehaviour
 {
     void Start()
     {

@@ -11,7 +11,7 @@ def main(partId):
     test_directory = "/autograder/source/Tests"
     expected_filename = "ControladorLetreroPropiedad.cs"
 
-    # Inicializar feedback
+    # Feedback
     initialize_feedback()
     print_stderr("Feedback initialized")
 
@@ -32,12 +32,12 @@ def main(partId):
     checks = [
         {
             "pattern": r"using System.Collections;\s*using System.Collections.Generic;\s*using UnityEngine;\s*using TMPro;",
-            "error_message": "El código debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, usando TMPro.",
+            "error_message": "El código debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.",
             "points_deducted": 10
         },
         {
-            "pattern": r"public class ControladorLetrero\s*:\s*MonoBehaviour\s*{",
-            "error_message": "La clase debe declararse como 'public class ControladorLetrero : MonoBehaviour {'.",
+            "pattern": r"public class ControladorLetreroPropiedad\s*:\s*MonoBehaviour\s*{",
+            "error_message": "La clase debe declararse como 'public class ControladorLetreroPropiedad : MonoBehaviour {'.",
             "points_deducted": 10
         },
         {
@@ -83,6 +83,9 @@ def main(partId):
             if not re.search(check["pattern"], submission_content):
                 errors.append(check["error_message"])
                 file_points -= check["points_deducted"]
+
+               
+        
 
         # Si hay errores, enviar retroalimentación con los errores encontrados
         if errors:

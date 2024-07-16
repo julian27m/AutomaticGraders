@@ -8,8 +8,6 @@ from util import send_feedback, print_stderr
 def main(partId):
     # El directorio /shared/submission/ es el directorio de envío estándar en todos los cursos
     submission_location = "/shared/submission/"
-    # Directorio para pruebas locales
-    # submission_location = "/autograder/source/"
     expected_filename = "ControladorLetreroPropiedad.cs"
     submission_filepath = os.path.join(submission_location, expected_filename)
 
@@ -30,8 +28,8 @@ def main(partId):
             "points_deducted": 10
         },
         {
-            "pattern": r"public class ControladorLetrero\s*:\s*MonoBehaviour\s*{",
-            "error_message": "La clase debe declararse como 'public class ControladorLetrero : MonoBehaviour {'.",
+            "pattern": r"public class ControladorLetreroPropiedad\s*:\s*MonoBehaviour\s*{",
+            "error_message": "La clase debe declararse como 'public class ControladorLetreroPropiedad : MonoBehaviour {'.",
             "points_deducted": 10
         },
         {

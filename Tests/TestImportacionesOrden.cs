@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 
-public class ControladorLetrero : MonoBehaviour
+public class ControladorLetreroPropiedad : MonoBehaviour
 {
     public string nombrePropietario;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ControladorLetreroPropiedad : MonoBehaviour
+public class ControladorLetrero : MonoBehaviour
 {
     public string nombrePropietario;
 
@@ -11,7 +11,7 @@ public class ControladorLetreroPropiedad : MonoBehaviour
 
     void Start()
     {
-        
+        propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);
     }
 
     public string DarMensajePropiedad(string nombrePropietario)

@@ -5,7 +5,7 @@ using TMPro;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ControladorLetrero : MonoBehaviour
+public class ControladorLetreroPropiedad : MonoBehaviour
 {
     public string nombrePropietario;
 
@@ -22,12 +22,3 @@ public class ControladorLetrero : MonoBehaviour
         return respuesta;
     }
 }
-
-
-
-
-
-
-
-
-

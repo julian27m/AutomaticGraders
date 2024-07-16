@@ -11,7 +11,12 @@ public class ControladorLetreroPropiedad : MonoBehaviour
 
     void Start()
     {
-        
+        propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);
+    }
+
+    void Update()
+    {
+        nombrePropietario.text = DarMensajePropiedad(nombrePropietario);
     }
 
     public string DarMensajePropiedad(string nombrePropietario)
