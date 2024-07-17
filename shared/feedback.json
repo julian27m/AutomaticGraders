@@ -22,7 +22,7 @@
         },
         {
             "score": 0.1,
-            "feedback": "Archivo: TestEnBlancoErrores.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.\nLa funci\u00f3n 'DarMensajePropiedad' debe declararse correctamente y retornar el mensaje 'Propiedad de ' m\u00e1s el nombre del propietario.\nEl c\u00f3digo contiene elementos adicionales fuera de la clase ControladorLetrero.",
+            "feedback": "Archivo: TestEnBlancoErrores.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.\nLa funci\u00f3n 'DarMensajePropiedad' debe declararse correctamente y retornar el mensaje 'Propiedad de ' m\u00e1s el nombre del propietario.\nEl c\u00f3digo contiene elementos adicionales fuera de la clase ControladorLetreroPropiedad.",
             "file": "TestEnBlancoErrores.cs"
         },
         {
@@ -92,13 +92,18 @@
         },
         {
             "score": 0.0,
-            "feedback": "Archivo: TestVacio.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe declararse como 'public class ControladorLetreroPropiedad : MonoBehaviour {'.\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.\nLa funci\u00f3n 'DarMensajePropiedad' debe declararse correctamente y retornar el mensaje 'Propiedad de ' m\u00e1s el nombre del propietario.\nEl c\u00f3digo contiene elementos adicionales fuera de la clase ControladorLetrero.",
+            "feedback": "Archivo: TestVacio.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe declararse como 'public class ControladorLetreroPropiedad : MonoBehaviour {'.\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.\nLa funci\u00f3n 'Start' debe contener 'propietarioTexto3D.text = DarMensajePropiedad(nombrePropietario);'.\nLa funci\u00f3n 'DarMensajePropiedad' debe declararse correctamente y retornar el mensaje 'Propiedad de ' m\u00e1s el nombre del propietario.\nEl c\u00f3digo contiene elementos adicionales fuera de la clase ControladorLetreroPropiedad.",
             "file": "TestVacio.cs"
         },
         {
-            "score": 0.8,
-            "feedback": "Archivo: TestNoImportaciones.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe declararse como 'public class ControladorLetreroPropiedad : MonoBehaviour {'.",
+            "score": 0.9,
+            "feedback": "Archivo: TestNoImportaciones.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.",
             "file": "TestNoImportaciones.cs"
+        },
+        {
+            "score": 0.5,
+            "feedback": "Archivo: TestMultiplesErrores.cs\nSe encontraron los siguientes errores:\nEl c\u00f3digo debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.\nLa clase debe contener la variable p\u00fablica 'public string nombrePropietario;'.\nLa clase debe contener la variable p\u00fablica 'public TextMeshPro propietarioTexto3D;'.",
+            "file": "TestMultiplesErrores.cs"
         },
         {
             "score": 0.8,

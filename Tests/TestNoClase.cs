@@ -17,3 +17,8 @@ public string nombrePropietario;
         string respuesta = "Propiedad de " + nombrePropietario;
         return respuesta;
     }
+
+
+
+
+    
