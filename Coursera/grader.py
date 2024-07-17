@@ -23,9 +23,24 @@ def main(partId):
     # Definir los patrones de expresiones regulares para los elementos requeridos y sus respectivos mensajes de retroalimentación
     checks = [
         {
-            "pattern": r"using System.Collections;\s*using System.Collections.Generic;\s*using UnityEngine;\s*using TMPro;",
-            "error_message": "El código debe incluir las siguientes declaraciones al inicio: using System.Collections, using System.Collections.Generic, using UnityEngine, using TMPro.",
-            "points_deducted": 10
+            "pattern": r"using System.Collections;",
+            "error_message": "El código debe incluir la declaración: using System.Collections;",
+            "points_deducted": 2.5
+        },
+        {
+            "pattern": r"using System.Collections.Generic;",
+            "error_message": "El código debe incluir la declaración: using System.Collections.Generic;",
+            "points_deducted": 2.5
+        },
+        {
+            "pattern": r"using UnityEngine;",
+            "error_message": "El código debe incluir la declaración: using UnityEngine;",
+            "points_deducted": 2.5
+        },
+        {
+            "pattern": r"using TMPro;",
+            "error_message": "El código debe incluir la declaración: using TMPro;",
+            "points_deducted": 2.5
         },
         {
             "pattern": r"public class ControladorLetreroPropiedad\s*:\s*MonoBehaviour\s*{",
@@ -68,7 +83,7 @@ def main(partId):
         if not re.search(check["pattern"], submission_content):
             errors.append(check["error_message"])
             total_points -= check["points_deducted"]
-
+    
     # Si hay errores, enviar retroalimentación con los errores encontrados
     if errors:
         feedback = "Se encontraron los siguientes errores:\n" + "\n".join(errors)
