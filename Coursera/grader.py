@@ -54,7 +54,7 @@ def main(partId):
         },
         {
             "pattern": r"}\s*$",
-            "error_message": "El código contiene elementos adicionales fuera de la clase ControladorLetrero.",
+            "error_message": "El código contiene elementos adicionales fuera de la clase ControladorLetreroPropiedad.",
             "points_deducted": 10
         }
     ]
