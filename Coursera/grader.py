@@ -16,9 +16,13 @@ def main(partId):
         send_feedback(0.0, f"El archivo enviado no se llama {expected_filename}.")
         return
 
-    # Leer el contenido del archivo de envío
-    with open(submission_filepath, 'r') as file:
-        submission_content = file.read()
+    # Leer el contenido del archivo de envío con UTF-8
+    try:
+        with open(submission_filepath, 'r', encoding='utf-8') as file:
+            submission_content = file.read()
+    except UnicodeDecodeError as e:
+        send_feedback(0.0, f"Error al leer el archivo: {str(e)}")
+        return
 
     # Definir los patrones de expresiones regulares para los elementos requeridos y sus respectivos mensajes de retroalimentación
     checks = [
@@ -83,7 +87,20 @@ def main(partId):
         if not re.search(check["pattern"], submission_content):
             errors.append(check["error_message"])
             total_points -= check["points_deducted"]
-    
+
+    # Verificar la función Update
+    update_pattern = re.compile(r"void Update\s*\(\)\s*{([^}]*)}")
+    update_match = update_pattern.search(submission_content)
+    if update_match:
+        update_content = update_match.group(1).strip()
+        if update_content and not re.fullmatch(r"(\s*|//.*|\s*//.*)*", update_content):
+            errors.append("La función 'Update' debe estar vacía o solo contener comentarios.")
+            total_points -= 10
+
+    # Asegurarse de que los puntos no sean negativos
+    if total_points < 0:
+        total_points = 0
+
     # Si hay errores, enviar retroalimentación con los errores encontrados
     if errors:
         feedback = "Se encontraron los siguientes errores:\n" + "\n".join(errors)
